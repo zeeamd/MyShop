@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    h4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+</style>
+
+{% if user.is_authenticated %}
+<h4><a href="/logout">Logout User {{ user.username }}</a></h4>
+
+<h3>Product Types</h3>
+
+<table>
+    <th>HSN Code</th>
+    <th>Product Type</th>
+    {% for x in ptypes %}
+    <tr>
+        <td>{{ x.hsncode }}</td>
+        <td>{{ x.ptype }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endif %}
+
+{% endblock %}

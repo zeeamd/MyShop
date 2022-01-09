@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h4>Retail App</h4>
+
+<table>
+    <tr>
+        <td>
+            <strong>Product Type</strong>
+        </td>
+        <td>
+            <strong>{{ pt }}</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Product Name</strong>
+        </td>
+        <td>
+            <strong>{{ pn }}</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Quantity</strong>
+        </td>
+        <td>
+            <strong>{{ q }}</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Rate</strong>
+        </td>
+        <td>
+            <strong>{{ r }}</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Cost Price</strong>
+        </td>
+        <td>
+            <strong>{{ cp }}</strong>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    h4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+</style>
+
+{% if user.is_authenticated %}
+<h4><a href="/logout">Logout User {{ user.username }}</a></h4>
+
+<h2>Retail Application</h2>
+<h3>Home</h3>
+
+<a href="/register">Add New User</a><br>
+<a href="/retail/buy">Buy Product</a><br>
+<a href="/retail/sell">Sell Product</a><br>
+<a href="/retail/newproducttype">Add New Product Type</a><br>
+<a href="/retail/newproduct">Add New Product</a><br>
+<a href="/retail/productdelete">Delete Product</a><br>
+<a href="/retail/producttypedelete">Delete Product Type</a><br>
+<a href="/retail/listproducttypes">List All Product Types</a><br>
+<a href="/retail/listproducts">List All Products</a><br>
+<a href="/retail/buyhistory">Buy History</a><br>
+<a href="/retail/sellhistory">Sell History</a><br>
+
+{% endif %}
+
+{% endblock %}

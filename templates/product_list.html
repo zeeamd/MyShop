@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    h4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+</style>
+
+{% if user.is_authenticated %}
+<h4><a href="/logout">Logout User {{ user.username }}</a></h4>
+
+<h3>Products</h3>
+
+<table>
+    <tr>
+        <th>ProductName</th>
+        <th>ProductType</th>
+        <th>Quantity</th>
+    </tr>
+    {% for x in products %}
+    <tr>
+        <td>{{ x.name }}</td>
+        <td>{{ x.ptype.ptype }}</td>
+        <td>{{ x.quantity }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endif %}
+
+{% endblock %}

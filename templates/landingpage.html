@@ -1,0 +1,43 @@
+{% extends 'accountbase.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+    h4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-align: right;
+    }
+</style>
+
+<h3>
+    <marquee>WELCOME TO SAGAR ENTERPRISES !!!</marquee>
+</h3>
+
+<h3>Retail & WholeSale</h3>
+<h3>Tyres/Engine Oil/Battery/Mobil/Grease etc.</h3>
+
+<p>
+    <b>Contact Details</b><br>
+    <i>Shami Imran Choudhury</i><br>
+    <i>Patherkhani Road, Karimganj, Assam</i><br>
+    <i>Pin 788710</i><br>
+    <i>Ph. 9954294901/7002016071</i>
+</p>
+
+<h4><a href="/login">Login To Sagar Enterprises</a></h4>
+
+<img src="{% static 'images/copyright.jpg' %}">
+
+{% endblock %}

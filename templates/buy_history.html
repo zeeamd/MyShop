@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    h4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+</style>
+
+{% if user.is_authenticated %}
+<h4><a href="/logout">Logout User {{ user.username }}</a></h4>
+
+<h3>Buy History</h3>
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Product Type</th>
+        <th>Product Name</th>
+        <th>Customer</th>
+        <th>Rate</th>
+        <th>Quantity</th>
+    </tr>
+    {% for x in allbuy %}
+    <tr>
+        <td>{{ x.bdate }}</td>
+        <td>{{ x.bp.ptype.ptype }}</td>
+        <td>{{ x.bp.name }}</td>
+        <td>{{ x.from_customer }}</td>
+        <td>{{ x.brate }}</td>
+        <td>{{ x.bquantity }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endif %}
+
+{% endblock %}
